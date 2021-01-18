@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/headerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:onClick="editProfile"
+    android:background="@color/primaryColor">
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/ic_person"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"/>
+
+    <TextView
+        android:id="@+id/tvMenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMenu"
+        android:fontFamily="@font/titillium_web_semi_bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="John Doe"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvMenuEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMenuName"
+        android:fontFamily="@font/titillium_web_light"
+        android:layout_marginStart="10dp"
+        android:text="johndoe@gmail.com"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+</RelativeLayout>
