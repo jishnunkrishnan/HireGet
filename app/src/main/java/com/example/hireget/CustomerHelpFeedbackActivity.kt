@@ -53,11 +53,11 @@ class CustomerHelpFeedbackActivity : AppCompatActivity() {
         title = "Help & Feedback"
         var ordersArray = arrayOf("Carpentry - 21/ Nov/ 2020", "Electrical - 21/ Dec/ 2019", "Masonry - 2/ Jan/ 2020")
         var customerArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ordersArray)
-        customerSpinnerOrder!!.adapter  = customerArrayAdapter
+        customerSpinnerOrder!!.adapter = customerArrayAdapter
 
         var issuesArray = arrayOf("Misbehaved", "Bad Work", "Charged More", "Others")
         customerArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, issuesArray)
-        customerSpinnerIssue!!.adapter  = customerArrayAdapter
+        customerSpinnerIssue!!.adapter = customerArrayAdapter
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)

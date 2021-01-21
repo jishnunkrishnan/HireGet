@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/titillium_web_regular"
             android:gravity="center"
-            android:onClick="registerHere"
+            android:onClick="regOrLog"
             android:text="Or Register Here"
             android:textColor="#000000" />
 
@@ -103,31 +103,38 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/llPassword"
             android:layout_below="@+id/etPhone"
-            android:hint="Password*"
-            android:inputType="textPassword"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp" />
-
-        <EditText
-            android:id="@+id/etConfirmPassword"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/etPassword"
-            android:hint="Confirm Password*"
-            android:inputType="textPassword"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password*"
+                android:inputType="textPassword"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:hint="Confirm Password*"
+                android:inputType="textPassword"
+                android:paddingStart="4dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/etWorkCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etConfirmPassword"
+            android:layout_below="@+id/llPassword"
             android:hint="Enter Work Category*"
             android:paddingStart="8dp"
             android:paddingEnd="8dp" />
@@ -183,14 +190,12 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="3"
                 android:text="Insert Your ID Card" />
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -200,11 +205,36 @@
                 android:text="Insert" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/llMapLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llIdCard"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvWorkerLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="3"
+                android:text="Set your map location" />
+            <Button
+                android:id="@+id/buttonWorkerLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2874A6"
+                android:text="Location" />
+        </LinearLayout>
+
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_below="@+id/llIdCard"
+            android:layout_below="@+id/llMapLocation"
             android:ems="10"
             android:gravity="start|top"
             android:hint="21, Baker Street - 54789*"
@@ -229,7 +259,7 @@
             android:layout_below="@+id/buttonProfile"
             android:fontFamily="@font/titillium_web_regular"
             android:gravity="center"
-            android:onClick="loginHere"
+            android:onClick="regOrLog"
             android:text="Or Login Here"
             android:textColor="#000000" />
 
